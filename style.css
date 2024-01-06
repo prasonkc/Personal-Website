@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --body_background: 113deg, #984D38 -30.3%, #181E41 58.12%;
+}
+
+body{
+    background: linear-gradient(var(--body_background));
+}
+
+.introduction{
+    width: 90%;
+    margin: auto;
+    height: 90vh;
+}
+
+nav{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+nav ul:first-child{
+    margin-left: 40px;
+}
+
+.navbar-right a{
+    color:white;
+    text-decoration: none;
+    padding: 20px;
+}
+
+nav ul li:first-child{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li .navbar-right a:last-child{
+    border: 2px solid white;
+    padding: 10px;
+}
+
+.myIntro{
+    color: white;
+    text-align: center;
+    margin: 70px;
+}
+
+.myIntro h1{
+    font-family: Playfair Display;
+    font-size: 4.5rem;
+}   
+
+.myIntro span{
+    font-family: poppins;
+    font-weight: 400; 
+    color: rgba(255, 255, 255, 0.50);
+}
+
+.degName{
+    transform: translateY(10px) rotate(-90deg);
+    color: rgba(255, 255, 255, 0.30); 
+    font-size: 20px;
+    letter-spacing: 20px; 
+    font-weight: 500;
+    position: absolute;
+    right: 84.5%;
+    top: 40%;
+}
+
+.myImage{
+    width: 50vw;
+    opacity: 85%;
+    position: absolute;
+    left: 23%;
+    bottom: 10%;
+}
+
+.links{
+    height: 10vh;
+    max-width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18rem;
+}
+
+.links a{
+    color: rgb(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-family: poppins;
+    font-weight: 300;
+    font-size: 1.1em;
+}
