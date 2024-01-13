@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('./anims.css');
 
 *{
     margin: 0;
@@ -10,8 +11,10 @@
     --body_background: 113deg, #984D38 -30.3%, #181E41 58.12%;
 }
 
-body{
+body, html{
     background: linear-gradient(var(--body_background));
+    margin: 0;
+    overflow: visible;
 }
 
 .introduction{
@@ -41,11 +44,18 @@ nav ul:first-child{
     margin-left: 40px;
 }
 
-.navbar-right a{
-    color:white;
+.navbar-right a {
+    color: white;
     text-decoration: none;
     padding: 20px;
-}
+    transition: text-decoration 0.6s ease-in;
+  }
+  
+  .navbar-right a:hover {
+    text-decoration: underline;
+        text-decoration-thickness: 1.5px;
+  }
+  
 
 nav ul li:first-child{
     display: flex;
@@ -57,6 +67,10 @@ nav ul li:first-child{
 nav ul li .navbar-right a:last-child{
     border: 2px solid white;
     padding: 10px;
+}
+
+nav ul li .navbar-right a:last-child:hover{
+    animation: color-change 3s ease-out infinite;
 }
 
 .myIntro{
@@ -103,6 +117,8 @@ nav ul li .navbar-right a:last-child{
     justify-content: center;
     align-items: center;
     gap: 18rem;
+    position: sticky;
+    top: 0;
 }
 
 .links a{
@@ -112,3 +128,189 @@ nav ul li .navbar-right a:last-child{
     font-weight: 300;
     font-size: 1.1em;
 }
+
+.links a:hover{
+    color: rgba(255, 255, 255, 0.44);
+}
+
+.sec2{
+    height: 80vh;
+}
+
+.sec2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec2 div img{
+    width: 50vw;
+}
+
+.my-desc{
+    padding: 20px;
+    margin: 20px;
+}
+
+.my-desc h1{
+    color: white;
+    font-family: 'Playfair Display';
+    font-size: 3em;
+    font-weight: bolder;
+    margin: 30px;
+    padding: 30px;
+    margin-top: 10px;
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 5;
+}
+
+.my-desc p{
+    font-family: "Poppins";
+    color: white;
+    margin: 30px;
+    padding: 30px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+hr{
+    color: white;
+    margin: 20px 100px;
+}
+
+.sec3{
+    height: 40vh;
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
+    grid-template-rows: 2fr 1.5fr;
+    padding: 10px 120px;
+}
+
+.sec3 h1{
+    color: white;
+    font-family: Playfair Display; 
+    font-size: 3.125rem; 
+    font-weight: 700;
+    line-height: 180%;
+    letter-spacing: 0.01875rem; 
+}
+
+.sec3>div>p{
+    color: rgba(255, 255, 255, 0.50);
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 180%;
+    letter-spacing: 0.01875rem;
+    padding-right: 96px;
+}
+
+.grid-item-2 {
+    width: 450px;
+    height: 120px;
+    border-radius: 20px; 
+    background-color: rgba(255, 255, 255, 0.50);
+    margin: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 0.5fr 1fr;
+    font-family: Playfair Display;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-item-3 {
+    width: 450px;
+    height: 120px;
+    border-radius: 20px; 
+    background-color: #E9EDF0;
+    margin: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 0.5fr 1fr;
+    font-family: Playfair Display;
+    justify-content: center;
+    align-items: center;
+}
+
+.palette1{
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    background-color: #F0C149;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 1/3;
+    grid-column: 1/2;
+    justify-self: center;
+}
+
+.palette2{
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    background-color: #286F6C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 1/3;
+    grid-column: 1/2;
+    justify-self: center;
+}
+
+.grid-item-2 h2, .grid-item-3 h2{
+    align-self: flex-end;
+}
+
+.grid-item-2 p, .grid-item-3 p{
+    align-self: flex-start;
+    font-family: Poppins;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.introduction .navbar-right a:last-child:hover {
+    text-decoration: none;
+}
+
+footer h2{
+    color: white;
+    text-align: center;
+    font-family: "Playfair Display";
+    font-size: 40px;
+    margin: 10px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .email{
+    width: 120px;
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    margin: auto;
+    padding: 10px;
+    margin: 10px 0px 40px 0px;
+    gap: 10px;
+}
+
+.email:hover{
+    animation: color-change 3s ease-out infinite;
+    cursor: pointer;
+}
+
+footer .email a{
+    color: white;
+    text-decoration: none;
+    font-family: "Poppins";
+    font-size: 14px;
+}
+
