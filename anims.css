@@ -1,0 +1,46 @@
+@keyframes color-change{
+    0%{
+        color: red;
+        border: 2px solid red;
+    }
+    10%{
+        color: aqua;
+        border: 2px solid aqua;
+    }
+    20%{
+        color: blue;
+        border: 2px solid blue;
+    }
+    30%{
+        color: yellow;
+        border: 2px solid yellow;
+    }
+    40%{
+        color: blueviolet;
+        border: 2px solid blueviolet;
+    }
+    50%{
+        color: coral;
+        border: 2px solid coral;
+    }
+    60%{
+        color: violet;
+        border: 2px solid violet;
+    }
+    70%{
+        color: magenta;
+        border: 2px solid magenta;
+    }
+    80%{
+        color: gold;
+        border: 2px solid gold;
+    }
+    90%{
+        color: orchid;
+        border: 2px solid orchid;
+    }
+    100%{
+        color: turquoise;
+        border: 2px solid turquoise;
+    }
+}
