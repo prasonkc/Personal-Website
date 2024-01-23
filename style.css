@@ -111,7 +111,7 @@ nav ul li .navbar-right a:last-child:hover{
 
 .links{
     height: 10vh;
-    max-width: 100%;
+    width: 100vw;
     background-color: black;
     display: flex;
     justify-content: center;
@@ -125,8 +125,8 @@ nav ul li .navbar-right a:last-child:hover{
     color: rgb(255, 255, 255, 0.5);
     text-decoration: none;
     font-family: poppins;
-    font-weight: 300;
-    font-size: 1.1em;
+    font-weight: 300px;
+    font-size: 1.1rem;
 }
 
 .links a:hover{
@@ -314,3 +314,116 @@ footer .email a{
     font-size: 14px;
 }
 
+@media screen and (max-width: 811px){
+    .myImage{
+        visibility: hidden;
+    }
+    .links{
+        gap: 6rem;
+    }
+
+    .myIntro{
+        text-align: center;
+        padding: 5vw;
+    }
+
+    .sec2 div img{
+        display: none;
+    }
+
+    .sec2{
+        height: 40vh;
+        padding: 0;        
+    }
+
+    .sec2{
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .degName{
+        transform: translateY(-210px) rotate(-90deg);
+    }
+
+    .introduction{
+        height: 40vh;
+    }
+
+    .grid-item-2, .grid-item-3 {
+        width: 40vw;
+    }
+
+    .grid-item-1{
+        overflow: scroll;
+    }
+
+    .sec3{
+        height: 40vw;
+    }
+
+    .sec3 h1{
+        font-size: 2rem;
+    }
+
+    .sec3 p{
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .navbar-right{
+        font-size: 12px;
+    }
+
+    .navbar-right a{
+        padding: 13px;
+    }
+    
+    nav ul li:first-child{
+        display: none;
+    }
+
+    .myIntro {
+        text-align: center;
+        padding: 0vw;
+        font-size: 23px;
+    }
+
+    nav{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    nav ul li .navbar-right a:last-child{
+        width: 20px;
+    }
+
+    .myImage{
+        visibility: hidden;
+    }
+
+    .links{
+        gap: 0.7rem;
+    }
+
+    .sec2 div img{
+        display: none;
+    }
+
+    .sec2{
+        display: none;       
+    }
+
+    hr{
+        margin: 0 10;
+    }
+
+    .introduction{
+        height: 70vh;
+    }
+
+    .sec3{
+        display: none;
+    }
+}

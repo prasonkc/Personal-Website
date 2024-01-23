@@ -3,110 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Prason KC</title>
+    <title>You're Hacked!</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: green;
+            flex-direction: column;
+            gap: 20px;
+            padding-top: 100px;
+        }
 
-    <link rel="stylesheet" href="./style.css">
+        .dot-container {
+            font-size: 24px;
+            display: inline;
+        }
+
+        p{
+            display: inline;
+        }
+
+        .dot{
+            position: relative;
+            animation: loading-anim 0.9s infinite ease-in-out;
+        }
+
+        .dot:nth-child(2) {
+        animation-delay: 0.2s;
+        }
+
+        .dot:nth-child(3) {
+        animation-delay: 0.4s;
+        }
+
+
+        @keyframes loading-anim {
+            0%, 100% {
+                opacity: 0;
+            }
+
+            50%{
+                opacity: 1;
+            }
+        }
+
+    </style>
 </head>
 <body>
-    <div class="introduction">
-        <nav>
-            <ul>
-                <li>
-                    <div class="nav-ellipse-left">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="20" cy="20" r="19.5" stroke="white"/>
-                            <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-size="20" fill="white">P</text>
-                        </svg>  
-                    </div>
-                    <div>Prason</div>
-                </li>
-                 <li>
-                    <div class="navbar-right">
-                           <a href="#">Home</a>
-                           <a href="#">About</a>
-                           <a href="#">Services</a>
-                           <a href="mailto:prasonkc7@gmail.com">Hire Me</a>
-                    </div>
-                 </li>
-            </ul>
-        </nav>
+    <!-- Create a hacking simulator which has green background and it shows these messages with random delay of 1 to 7 seconds 
+    
+    Initializing Hacking...
+    Reading your Files...
+    Password files Detected...
+    Sending all passwords and personal files to server...
+    Cleaning up...
 
-        <div class="myIntro">
-            <h1>I'm Prason KC!</h1>
-            <span>Web Developer/Programmer/Video Editor</span>
-        </div>
+    The three dots must blink so that it looks like a real terminal
+    -->
+    <script>
+    rand1 = Math.random() * 10000;
+    async function foo(msg) {
+        return new Promise(async (resolve) => {
+            let cont = document.createElement("div");
+            document.body.append(cont);
 
-        <div class="degName">PRASON</div>
-    </div>
+            let p = document.createElement("p");
+            p.innerText = msg;
+            cont.append(p);
 
-    <img class="myImage" src="./prakc.png" alt="Prason KC">
-
-    <div class="links">
-        <a href="https://github.com/prasonkc" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/prason-kc-6782061b6/" target="_blank">LinkedIn</a>
-        <a href="https://www.instagram.com/prasonkc" target="_blank">Instagram</a>
-        <a href="https://www.facebook.com/prason.kc.1/" target="_blank">Facebook</a>
-    </div>
-
-    <div class="sec2">
-        <div>
-            <img src="./programmer_computer.png" alt="">
-        </div>
-        <div class="my-desc">
-            <h1>Software Developer currently based on Canada</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit amet, ad perferendis alias nulla tempora inventore pariatur! Inventore, error ducimus mollitia, explicabo culpa, cumque quo praesentium dolorem nam placeat maxime.</p>
-        </div>
-    </div>
-    <hr>
-
-    <div class="sec3"> 
-        <div class="grid-item-1">
-            <h1>WHAT DO I HELP</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda ipsa corporis earum modi dolorum consequuntur doloremque quidem expedita praesentium, distinctio provident, inventore nesciunt dolorem reprehenderit est autem eveniet eius architecto.</p>
-        </div>
-
-        <div class="skills">
-            <div class="grid-item-2">
-                <div class="palette1">
-                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M21.875 5.95415V6.25H15.625V0H15.9208C16.2316 0 16.5297 0.123486 16.7495 0.343213L21.5318 5.12549C21.7515 5.34528 21.875 5.64335 21.875 5.95415ZM15.2344 7.8125C14.5898 7.8125 14.0625 7.28516 14.0625 6.64062V0H4.29688C3.64966 0 3.125 0.524658 3.125 1.17188V23.8281C3.125 24.4753 3.64966 25 4.29688 25H20.7031C21.3503 25 21.875 24.4753 21.875 23.8281V7.8125H15.2344ZM9.14092 19.5559C9.11724 19.5812 9.08881 19.6015 9.05726 19.6158C9.02571 19.6301 8.99166 19.638 8.95705 19.6391C8.92244 19.6402 8.88795 19.6345 8.85555 19.6223C8.82315 19.6101 8.79347 19.5916 8.76821 19.5679L5.60093 16.5986C5.57462 16.5739 5.55366 16.5441 5.53932 16.511C5.52499 16.478 5.51759 16.4423 5.51759 16.4062C5.51759 16.3702 5.52499 16.3345 5.53932 16.3014C5.55366 16.2683 5.57462 16.2385 5.60093 16.2139L8.76821 13.2445C8.79347 13.2208 8.82315 13.2024 8.85555 13.1902C8.88795 13.1779 8.92244 13.1722 8.95705 13.1733C8.99166 13.1745 9.02571 13.1824 9.05726 13.1967C9.08881 13.2109 9.11724 13.2313 9.14092 13.2565L10.0969 14.2763C10.1211 14.3021 10.1398 14.3325 10.152 14.3656C10.1642 14.3988 10.1696 14.434 10.1679 14.4693C10.1662 14.5046 10.1575 14.5392 10.1422 14.571C10.1268 14.6028 10.1053 14.6313 10.0788 14.6546L8.08838 16.4062L10.0788 18.1579C10.1053 18.1812 10.1268 18.2097 10.1422 18.2415C10.1575 18.2733 10.1662 18.3079 10.1679 18.3432C10.1696 18.3785 10.1642 18.4137 10.152 18.4469C10.1398 18.48 10.1211 18.5104 10.0969 18.5362L9.14092 19.5559ZM11.6456 22.0207L10.3051 21.6315C10.2379 21.612 10.1813 21.5666 10.1476 21.5054C10.1139 21.4441 10.1059 21.372 10.1253 21.3048L13.1253 10.9715C13.1449 10.9043 13.1902 10.8477 13.2515 10.814C13.3128 10.7803 13.3849 10.7723 13.4521 10.7917L14.7925 11.1809C14.8258 11.1906 14.8568 11.2067 14.8838 11.2283C14.9109 11.25 14.9334 11.2767 14.9501 11.3071C14.9667 11.3374 14.9773 11.3707 14.9811 11.4052C14.9849 11.4396 14.9819 11.4744 14.9722 11.5077L11.9722 21.841C11.9626 21.8742 11.9465 21.9053 11.9249 21.9323C11.9032 21.9593 11.8765 21.9818 11.8461 21.9985C11.8158 22.0152 11.7825 22.0258 11.7481 22.0296C11.7136 22.0334 11.6788 22.0304 11.6456 22.0207ZM19.4967 16.5986L16.3294 19.5679C16.3042 19.5916 16.2745 19.6101 16.2421 19.6223C16.2097 19.6345 16.1752 19.6402 16.1406 19.6391C16.106 19.638 16.0719 19.6301 16.0404 19.6158C16.0088 19.6015 15.9804 19.5812 15.9567 19.5559L15.0007 18.5361C14.9765 18.5104 14.9578 18.48 14.9456 18.4468C14.9334 18.4137 14.928 18.3784 14.9297 18.3432C14.9314 18.3079 14.9401 18.2733 14.9555 18.2415C14.9708 18.2096 14.9923 18.1812 15.0188 18.1579L17.0093 16.4062L15.0189 14.6546C14.9924 14.6313 14.9708 14.6028 14.9555 14.571C14.9402 14.5392 14.9314 14.5046 14.9297 14.4693C14.928 14.434 14.9334 14.3988 14.9456 14.3656C14.9578 14.3325 14.9766 14.3021 15.0007 14.2763L15.9568 13.2565C15.9805 13.2313 16.0089 13.2109 16.0404 13.1967C16.072 13.1824 16.106 13.1745 16.1407 13.1733C16.1753 13.1722 16.2098 13.1779 16.2422 13.1902C16.2746 13.2024 16.3042 13.2208 16.3295 13.2445L19.4968 16.2139C19.5231 16.2385 19.544 16.2683 19.5584 16.3014C19.5727 16.3345 19.5801 16.3702 19.5801 16.4062C19.5801 16.4423 19.5727 16.478 19.5583 16.5111C19.544 16.5441 19.523 16.5739 19.4967 16.5986Z" fill="white"/>
-                      </svg>
-                </div>
-                <h2>Website Design</h2>
-                <p>5+ Projects</p>
-            </div>
+            let dot_container = document.createElement("div");
+            dot_container.className = "dot-container";
+            cont.append(dot_container);
             
-            <div class="grid-item-3">
-                <div class="palette2">
-                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M24.375 18.75H14.9039C14.875 19.5238 14.3293 20 13.625 20H11.25C10.5199 20 9.96016 19.3176 9.96992 18.75H0.625C0.28125 18.75 0 19.0312 0 19.375V20C0 21.375 1.125 22.5 2.5 22.5H22.5C23.875 22.5 25 21.375 25 20V19.375C25 19.0312 24.7188 18.75 24.375 18.75ZM22.5 4.375C22.5 3.34375 21.6562 2.5 20.625 2.5H4.375C3.34375 2.5 2.5 3.34375 2.5 4.375V17.5H22.5V4.375ZM20 15H5V5H20V15Z" fill="white"/>
-                    </svg>
-                </div>
-                    <h2>Video Editing</h2>
-                    <p>20+ Projects</p>
-            </div>
-        </div>
-        </div>
-        <hr>
+            let span = [];
+            for (let i = 0; i < 3; i++) {
+                    span[i] = document.createElement("span");
+                    span[i].innerText = ".";
+                    span[i].className = "dot";
+                    dot_container.append(span[i]);
 
-        <footer>
-            <h2>Lets Start by Saying Hi!</h2>
+                }
 
-            <div class="email">
-                <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_127_771)">
-                      <path d="M6.94444 20.8334C5.83333 20.8334 4.72222 19.8611 4.16667 19.4445C1.38889 17.5 0.555556 16.8056 0 16.3889V22.2222C0 22.9892 0.621962 23.6111 1.38889 23.6111H12.5C13.2669 23.6111 13.8889 22.9892 13.8889 22.2222V16.3889C13.3333 16.8056 12.5 17.5 9.72222 19.4445C9.16667 19.8611 8.05556 20.8334 6.94444 20.8334ZM12.5 12.5H1.38889C0.621962 12.5 0 13.122 0 13.8889V14.5834C1.11111 15.4167 0.972222 15.4167 5 18.3334C5.41667 18.6111 6.25 19.4445 6.94444 19.4445C7.63889 19.4445 8.47222 18.6111 8.88889 18.4722C12.9167 15.5556 12.7778 15.5556 13.8889 14.7222V13.8889C13.8889 13.122 13.2669 12.5 12.5 12.5ZM23.6111 8.33336H9.72222C8.95529 8.33336 8.33333 8.95532 8.33333 9.72225V11.1111H12.5C13.9414 11.1111 15.1298 12.2144 15.2652 13.6207L15.2778 13.6111V19.4445H23.6111C24.378 19.4445 25 18.8225 25 18.0556V9.72225C25 8.95532 24.378 8.33336 23.6111 8.33336ZM22.2222 13.8889H19.4444V11.1111H22.2222V13.8889ZM6.94444 9.72225C6.94444 8.19057 8.19054 6.94447 9.72222 6.94447H19.4444V2.7778C19.4444 2.01088 18.8225 1.38892 18.0556 1.38892H4.16667C3.39974 1.38892 2.77778 2.01088 2.77778 2.7778V11.1111H6.94444V9.72225Z" fill="white"/>
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_127_771">
-                        <rect width="25" height="25" fill="white"/>
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  <a href="mailto:prasonkc7@gmail.com">Email Me</a>
-            </div>
-        </footer>
+            setTimeout(() => {
+                span.forEach(s => {
+                    s.remove();
+                });
+                resolve(1);
+            }, rand1);
+        });
+    }
 
-        <script src="./script.js"></script>
+    async function main() {
+        await foo("Initializing Hacking");
+        await foo("Reading your Files");
+        await foo("Password files Detected");
+        await foo("Sending all passwords and personal files to server");
+        await foo("Cleaning up");
+        await foo("Just kidding, redirecting you to my website");
+
+        window.location.href = "./redirect.html";
+    }
+
+    main(); 
+
+    </script>
+
 </body>
 </html>
